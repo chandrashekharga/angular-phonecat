@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>Next Gen EST</title>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-te09KC6oBpY7r6HLJ7IiQrQASlPPD3Y"></script>
+		<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+		<script data-main="js/main" src="require.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/title.css" />
+		<style type="text/css">
+			body {
+				overflow: hidden;
+			}
+
+			i.close {
+			    top:70px !important;
+			    right:107px !important;
+			}
+
+			#main-modal {
+				transform: scale(0.67, 0.67);
+				-webkit-transform: scale(0.67,0.67);
+				transform-origin: top left;
+				-webkit-transform-origin: top left;
+				width: 1920px;
+				height: 1080px;
+			}
+
+			.thetake-disclaimer {
+				bottom: 35px;
+			}
+
+			.product-details.thetake-disclaimer {
+				bottom: 65px;
+			}
+
+			#thetake-content #tab-view {
+				transform: scale(0.95);
+    			transform-origin: top;
+    			-webkit-transform: scale(0.95);
+    			-webkit-transform-origin: top;
+			}
+
+			#safe-zone {
+				display: none;
+			}
+
+			#tt-content {
+				position: relative;
+				top: -30px;
+				height: 100%;
+			}
+
+			#main-modal {
+				overflow: hidden;
+			}
+
+
+		</style>
+		<script type="text/javascript">
+		
+			document.addEventListener("keydown", keyDownTextField, false);
+			var safeMode = 0;
+			function keyDownTextField(e) {
+				var keyCode = e.keyCode;				
+		  		if(keyCode == 219) {
+		  			safeMode = !safeMode;
+		  			document.getElementById("safe-zone").style.display = safeMode ? "block" : "none";
+		  		}
+			};
+			function logg(msg) {
+				var flag = true;
+				if (flag) {
+					console.log(msg);
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<div id="main-wrapper">
+			<div id="main-modal">
+		        <div class="content"></div>
+		       
+			<img style="z-index: 100000; position: absolute; top: 0; left: 0;" src="http://qc.www.theplatform.services/universal/jurassicWorld/assets/ComCast_Safe_Area.png" id="safe-zone"></img>
+	 
+		    </div>
+			<audio id="audio-content" autoplay="autoplay"></audio>
+		</div>
+	</body>
+</html>
